@@ -20,7 +20,7 @@ TileChart.prototype.init = function(){
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
     var svgBounds = divTileChart.node().getBoundingClientRect();
-    self.svgWidth = svgBounds.width - self.margin.left - self.margin.right + 100;
+    self.svgWidth = svgBounds.width;
     self.svgHeight = self.svgWidth/2;
     var legendHeight = 150;
 
