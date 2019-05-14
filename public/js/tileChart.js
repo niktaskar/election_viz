@@ -161,7 +161,7 @@ TileChart.prototype.update = function(electionResult, colorScale){
         .attr("class", "legendQuantile");
 
     var legendQuantile = d3.legendColor()
-        .shapeWidth((self.svgWidth)/13)
+        .shapeWidth((self.svgWidth+self.margin.right)/13)
         .cells(10)
         .orient('horizontal')
         .scale(colorScale);
