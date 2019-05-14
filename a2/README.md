@@ -1,0 +1,1 @@
+* I did not use external sources, however, I discussed some concepts with Ian Katzman and Lucas Florence.
