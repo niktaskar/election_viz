@@ -20,7 +20,7 @@ TileChart.prototype.init = function(){
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
     var svgBounds = divTileChart.node().getBoundingClientRect();
-    self.svgWidth = svgBounds.width;
+    self.svgWidth = svgBounds.width - self.margin.left - self.margin.right;
     self.svgHeight = self.svgWidth/2;
     var legendHeight = 150;
 
@@ -161,7 +161,7 @@ TileChart.prototype.update = function(electionResult, colorScale){
         .attr("class", "legendQuantile");
 
     var legendQuantile = d3.legendColor()
-        .shapeWidth((self.svgWidth+self.margin.right)/13)
+        .shapeWidth((self.svgWidth)/13)
         .cells(10)
         .orient('horizontal')
         .scale(colorScale);
